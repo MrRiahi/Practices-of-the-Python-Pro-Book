@@ -30,3 +30,16 @@ class ProductTestCase(unittest.TestCase):
         expected_value = 'BLACK'
 
         self.assertEqual(first=real_value, second=expected_value)
+
+    def test_generate_sku(self):
+        """
+        Test case for generate sku method in Product class.
+        :return:
+        """
+
+        sku = Product(name='shoes', color='black', size='S')
+
+        real_value = sku.generate_sku()
+        expected_value = 'SHOES-S-BLACK'
+
+        self.assertEqual(first=real_value, second=expected_value)
