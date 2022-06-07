@@ -31,5 +31,5 @@ class ShippingCart:
         sku = product.generate_sku()
         self.products[sku]['quantity'] -= quantity
 
-        if self.products[sku] == 0:
+        if self.products[sku] <= 0:
             del self.products[sku]
