@@ -10,8 +10,12 @@ class Product:
         self.color = color
         self.size = size
 
+    @staticmethod
+    def remove_space(name):
+        return ''.join(name.split())
+
     def transform_name_to_sku(self):
-        return self.name.upper()
+        return self.remove_space(name=self.name.upper())
 
     def transform_color_to_sku(self):
         return self.color.upper()
