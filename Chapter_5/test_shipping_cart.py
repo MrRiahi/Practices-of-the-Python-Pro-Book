@@ -37,6 +37,6 @@ class ShippingCartTestCase(unittest.TestCase):
         # Remove product
         shipping_cart.remove_product(product=product)
 
-        expected_value = {'SHOES-S-BLACK': {'quantity': 0}}
+        expected_value = {}
 
         self.assertDictEqual(d1=shipping_cart.products, d2=expected_value)
